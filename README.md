@@ -43,7 +43,6 @@ Some useful manage commands are:
    console   Run an interactive Memcached shell
    pid       Return the process id of Memcached
    prepare   Prepare environment
-   restart   Restart the minecraft server
    running   Check if Memcached is running
    start     Start the Memcached server
    stop      Stop the Memcached server

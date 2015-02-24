@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Usage: manage console
+# Summary: Run an interactive Memcached shell
+# Help: This command is used to start an interactive Memcached shell.
+set -e
+[[ -z $_MANAGE_ROOT ]] && exit 1
+
+telnet localhost 11211

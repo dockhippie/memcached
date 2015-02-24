@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Usage: manage stop
+# Summary: Stop the Memcached server
+# Help: This command is used to really stop the Memcached server process.
+set -e
+[[ -z $_MANAGE_ROOT ]] && exit 1
+
+if manage-running
+then
+  kill -INT $(manage-pid)
+else
+  echo "Server is not running"
+fi

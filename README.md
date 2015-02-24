@@ -1,7 +1,7 @@
 # Memcached
 
 These are docker images for Memcached running on an
-[openSUSE 13.2 container](https://registry.hub.docker.com/_/opensuse/)
+[Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/)
 
 
 ## Usage

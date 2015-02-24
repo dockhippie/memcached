@@ -5,4 +5,9 @@
 set -e
 [[ -z $_MANAGE_ROOT ]] && exit 1
 
-telnet localhost 11211
+if manage-running
+then
+  telnet localhost 11211
+else
+  echo "Server is not running"
+fi

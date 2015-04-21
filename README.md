@@ -1,7 +1,8 @@
 # Memcached
 
 These are docker images for Memcached running on an
-[Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/)
+[Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/).
+The cuurrent container size is ```9.08 MB```
 
 
 ## Usage

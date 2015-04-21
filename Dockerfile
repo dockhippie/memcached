@@ -10,8 +10,7 @@ RUN mkdir -p /shared
 
 RUN apk-install \
   memcached \
-  libmemcached \
-  heimdal-telnet
+  libmemcached
 
 RUN mkdir -p /docker/libexec
 ADD libexec /docker/libexec
@@ -23,4 +22,4 @@ EXPOSE 11211
 
 WORKDIR /docker
 ENTRYPOINT ["manage"]
-CMD ["bash"]
+CMD ["start"]

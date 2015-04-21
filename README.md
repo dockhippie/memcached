@@ -40,7 +40,6 @@ Usage: manage <command> [<args>]
 Some useful manage commands are:
    bash      Start a shell on container
    commands  List all available sub commands
-   console   Run an interactive Memcached shell
    pid       Return the process id of Memcached
    prepare   Prepare environment
    running   Check if Memcached is running

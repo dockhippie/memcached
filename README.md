@@ -7,8 +7,7 @@ These are docker images for Memcached running on an
 ## Usage
 
 ```
-docker run -v /var/lib/memcached --name memcached-data busybox true
-docker run -p 11211:11211 -d --volumes-from memcached-data --name memcached webhippie/memcached:latest start
+docker run -p 11211:11211 -d --name memcached webhippie/memcached:latest start
 
 # Execute this for further available commands
 docker exec -ti memcached manage help

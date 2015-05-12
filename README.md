@@ -2,16 +2,12 @@
 
 These are docker images for Memcached running on an
 [Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/).
-The cuurrent container size is ```9.08 MB```
 
 
 ## Usage
 
 ```
-docker run -p 11211:11211 -d --name memcached webhippie/memcached:latest start
-
-# Execute this for further available commands
-docker exec -ti memcached manage help
+docker run -p 11211:11211 -d --name memcached webhippie/memcached:latest
 ```
 
 
@@ -32,22 +28,6 @@ ENV MEMCACHED_OPTS
 ```
 
 
-## Available management commands
-
-```bash
-Usage: manage <command> [<args>]
-
-Some useful manage commands are:
-   bash      Start a shell on container
-   commands  List all available sub commands
-   pid       Return the process id of Memcached
-   prepare   Prepare environment
-   running   Check if Memcached is running
-   start     Start the Memcached server
-   stop      Stop the Memcached server
-```
-
-
 ## Contributing
 
 Fork -> Patch -> Push -> Pull Request
@@ -65,4 +45,6 @@ MIT
 
 ## Copyright
 
+```
 Copyright (c) 2015 Thomas Boerger <http://www.webhippie.de>
+```

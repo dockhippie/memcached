@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chown -R memcached:memcached \
+  /var/lib/memcached

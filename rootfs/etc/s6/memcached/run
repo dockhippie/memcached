@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ -f ./setup ]
+then
+  ./setup
+fi
+
+STARTCMD="/usr/bin/memcached -vv -u memcached -l 0.0.0.0"
+
+if [ -n "${MEMCACHED_MAXMEM}" ]
+then
+  STARTCMD="${STARTCMD} -m ${MEMCACHED_MAXMEM}"
+else
+  STARTCMD="${STARTCMD} -m 64"
+fi
+
+if [ -n "${MEMCACHED_MAXCONN}" ]
+then
+  STARTCMD="${STARTCMD} -c ${MEMCACHED_MAXCONN}"
+else
+  STARTCMD="${STARTCMD} -c 1024"
+fi
+
+if [ -n "${MEMCACHED_THREADS}" ]
+then
+  STARTCMD="${STARTCMD} -t ${MEMCACHED_THREADS}"
+else
+  STARTCMD="${STARTCMD} -t 4"
+fi
+
+exec ${STARTCMD}

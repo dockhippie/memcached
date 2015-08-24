@@ -1,13 +1,17 @@
 # Memcached
 
-These are docker images for Memcached running on an
+[![](https://badge.imagelayers.io/webhippie/memcached:latest.svg)](https://imagelayers.io/?images=webhippie/memcached:latest 'Get your own badge on imagelayers.io')
+
+These are docker images for [Memcached](http://memcached.org) running on an
 [Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/).
 
 
 ## Usage
 
-```
-docker run -p 11211:11211 -d --name memcached webhippie/memcached:latest
+```bash
+docker run -ti \
+  --name memcached \
+  webhippie/memcached:latest
 ```
 
 
@@ -25,6 +29,20 @@ ENV MEMCACHED_MAXMEM 64
 ENV MEMCACHED_MAXCONN 1024
 ENV MEMCACHED_THREADS 4
 ENV MEMCACHED_OPTS
+```
+
+
+## Inherited environment variables
+
+```bash
+ENV LOGSTASH_ENABLED false
+ENV LOGSTASH_HOST logstash
+ENV LOGSTASH_PORT 5043
+ENV LOGSTASH_CA /etc/ssl/logstash/certs/ca.pem # As string or filename
+ENV LOGSTASH_CERT /etc/ssl/logstash/certs/cert.pem # As string or filename
+ENV LOGSTASH_KEY /etc/ssl/logstash/private/cert.pem # As string or filename
+ENV LOGSTASH_TIMEOUT 15
+ENV LOGSTASH_OPTS
 ```
 
 

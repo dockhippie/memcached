@@ -12,4 +12,4 @@ ADD rootfs /
 EXPOSE 11211
 
 WORKDIR /root
-CMD ["/usr/bin/s6-svscan","/etc/s6"]
+CMD ["/usr/bin/s6-svscan", "/etc/s6"]

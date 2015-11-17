@@ -2,7 +2,7 @@
 
 if [ -f ./setup ]
 then
-  ./setup
+  source ./setup
 fi
 
 STARTCMD="/usr/bin/memcached -vv -u memcached -l 0.0.0.0"

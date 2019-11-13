@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+declare -x MEMCACHED_MAXMEM
+[[ -z "${MEMCACHED_MAXMEM}" ]] && MEMCACHED_MAXMEM="64"
+
+declare -x MEMCACHED_MAXCONN
+[[ -z "${MEMCACHED_MAXCONN}" ]] && MEMCACHED_MAXCONN="1024"
+
+declare -x MEMCACHED_THREADS
+[[ -z "${MEMCACHED_THREADS}" ]] && MEMCACHED_THREADS="4"
+
+declare -x MEMCACHED_OPTS
+[[ -z "${MEMCACHED_OPTS}" ]] && MEMCACHED_OPTS=""
+
+declare -x MEMCACHED_SKIP_CHOWN
+[[ -z "${MEMCACHED_SKIP_CHOWN}" ]] && MEMCACHED_SKIP_CHOWN="false"

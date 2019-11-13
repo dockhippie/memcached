@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ -f ./setup ]
+then
+  source ./setup
+fi
+
+if [ -f ./custom ]
+then
+  source ./custom
+fi
+
+if [ -d ./custom.d ]
+then
+  for FILE in $(find ./custom.d -type f -iname \*.sh | sort)
+  do
+    source ${FILE}
+  done
+fi
+
+STARTCMD="memcached -vv -u memcached -l 0.0.0.0"
+
+[[ -n "${MEMCACHED_MAXMEM}" ]] && STARTCMD="${STARTCMD} -m ${MEMCACHED_MAXMEM}"
+[[ -n "${MEMCACHED_MAXCONN}" ]] && STARTCMD="${STARTCMD} -c ${MEMCACHED_MAXCONN}"
+[[ -n "${MEMCACHED_THREADS}" ]] && STARTCMD="${STARTCMD} -t ${MEMCACHED_THREADS}"
+[[ -n "${MEMCACHED_OPTS}" ]] && STARTCMD="${STARTCMD} ${MEMCACHED_OPTS}"
+
+pushd /var/lib/memcached > /dev/null
+  echo "> starting memcached service"
+  exec ${STARTCMD}
+popd > /dev/null

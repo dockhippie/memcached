@@ -1,5 +1,6 @@
 # Memcached
 
+[![Build Status](https://cloud.drone.io/api/badges/dockhippie/memcached/status.svg)](https://cloud.drone.io/dockhippie/memcached)
 [![](https://images.microbadger.com/badges/image/webhippie/memcached.svg)](https://microbadger.com/images/webhippie/memcached "Get your own image badge on microbadger.com")
 
 These are docker images for [Memcached](http://memcached.org) running on an [Alpine Linux container](https://registry.hub.docker.com/u/webhippie/alpine/).
@@ -7,7 +8,7 @@ These are docker images for [Memcached](http://memcached.org) running on an [Alp
 
 ## Versions
 
-* [latest](https://github.com/dockhippie/memcached/tree/master) available as ```webhippie/memcached:latest``` at [Docker Hub](https://registry.hub.docker.com/u/webhippie/memcached/)
+* [latest](./latest) available as `webhippie/memcached:latest`
 
 
 ## Volumes
@@ -23,18 +24,16 @@ These are docker images for [Memcached](http://memcached.org) running on an [Alp
 ## Available environment variables
 
 ```bash
-ENV MEMCACHED_MAXMEM 64
-ENV MEMCACHED_MAXCONN 1024
-ENV MEMCACHED_THREADS 4
-ENV MEMCACHED_OPTS
+MEMCACHED_MAXCONN = 1024
+MEMCACHED_MAXMEM = 64
+MEMCACHED_OPTS =
+MEMCACHED_THREADS = 4
 ```
 
 
 ## Inherited environment variables
 
-```bash
-ENV CRON_ENABLED false
-```
+* [webhippie/alpine](https://github.com/dockhippie/alpine#available-environment-variables)
 
 
 ## Contributing
@@ -55,5 +54,5 @@ MIT
 ## Copyright
 
 ```
-Copyright (c) 2015-2017 Thomas Boerger <http://www.webhippie.de>
+Copyright (c) 2015 Thomas Boerger <http://www.webhippie.de>
 ```

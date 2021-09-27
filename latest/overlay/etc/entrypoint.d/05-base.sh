@@ -14,3 +14,5 @@ declare -x MEMCACHED_OPTS
 
 declare -x MEMCACHED_SKIP_CHOWN
 [[ -z "${MEMCACHED_SKIP_CHOWN}" ]] && MEMCACHED_SKIP_CHOWN="false"
+
+true

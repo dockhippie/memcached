@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -eo pipefail
+source /usr/bin/entrypoint
 
 CHECK="$(echo stats | nc 127.0.0.1 11211 | grep uptime 2>/dev/null)"
 
-if [[ "${CHECK}" =~ "STAT" ]]
-then
-  exit 0
+if [[ "${CHECK}" =~ "STAT" ]]; then
+    exit 0
 fi
 
 exit 1

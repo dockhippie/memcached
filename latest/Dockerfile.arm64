@@ -1,4 +1,4 @@
-FROM webhippie/alpine:latest-arm64@sha256:e34484f5348a344de0e8cd2e1a6b1c561fc5f8085bc4763e6adedfdd44e3a882
+FROM webhippie/alpine:latest-arm64@sha256:4952e3c65a446a7305b665b70863b8c3b6bdcd151755a405ef4306e3a5f09501
 
 VOLUME ["/var/lib/memcached"]
 EXPOSE 11211

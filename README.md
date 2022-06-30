@@ -1,20 +1,23 @@
 # memcached
 
-[![Docker Build](https://github.com/dockhippie/memcached/workflows/docker/badge.svg)](https://github.com/dockhippie/memcached/actions?query=workflow%3Adocker) [![Readme Build](https://github.com/dockhippie/memcached/workflows/readme/badge.svg)](https://github.com/dockhippie/memcached/actions?query=workflow%3Areadme) [![Docker Size](https://img.shields.io/docker/image-size/webhippie/memcached/latest)](#) [![Docker Pulls](https://img.shields.io/docker/pulls/webhippie/memcached)](https://hub.docker.com/r/webhippie/memcached) [![GitHub Repo](https://img.shields.io/badge/github-repo-yellowgreen)](https://github.com/dockhippie/memcached)
+[![Docker Build](https://github.com/dockhippie/memcached/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/memcached/actions/workflows/docker.yml) [![GitHub Repo](https://img.shields.io/badge/github-repo-yellowgreen)](https://github.com/dockhippie/memcached)
 
-These are docker images for [Memcached](http://memcached.org) running on our [Alpine Linux image](https://github.com/dockhippie/alpine).
+These are docker images for [Memcached][upstream] running on our
+[Alpine Linux image][parent].
 
 ## Versions
 
-For the available versions please look at [Docker Hub](https://hub.docker.com/r/webhippie/memcached/tags) or [Quay](https://quay.io/repository/webhippie/memcached?tab=tags) or check the existing folders within the [GitHub repository](https://github.com/dockhippie/memcached).
+For the available versions please look at [Docker Hub][dockerhub] or
+[Quay][quayio] or check the existing folders within the
+[GitHub repository][github].
 
 ## Volumes
 
-* /var/lib/memcached
+*  /var/lib/memcached
 
 ## Ports
 
-* 11211
+*  11211
 
 ## Available environment variables
 
@@ -46,3 +49,9 @@ MIT
 ```console
 Copyright (c) 2015 Thomas Boerger <http://www.webhippie.de>
 ```
+
+[upstream]: http://memcached.org
+[parent]: https://github.com/dockhippie/alpine
+[dockerhub]: https://hub.docker.com/r/webhippie/golang/tags
+[quayio]: https://quay.io/repository/webhippie/golang?tab=tags
+[github]: https://github.com/dockhippie/golang

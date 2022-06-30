@@ -25,6 +25,7 @@ For the available versions please look at [Docker Hub][dockerhub] or
 MEMCACHED_MAXCONN = 1024
 MEMCACHED_MAXMEM = 64
 MEMCACHED_OPTS =
+MEMCACHED_SKIP_CHOWN = false
 MEMCACHED_THREADS = 4
 ```
 

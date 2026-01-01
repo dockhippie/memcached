@@ -29,6 +29,8 @@ MEMCACHED_SKIP_CHOWN = false
 MEMCACHED_THREADS = 4
 ```
 
+Extracted by the command: `grep -hE ': "\$\{(.*)\}"' latest/overlay/etc/entrypoint.d/*.sh | sed 's/: "\${//' | sed 's/:="/ = /' | sed 's/"}"$//' | sort | uniq`
+
 ## Inherited environment variables
 
 *  [webhippie/alpine](https://github.com/dockhippie/alpine#available-environment-variables)

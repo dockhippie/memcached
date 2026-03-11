@@ -1,7 +1,7 @@
 ---
 repository:
   name: memcached
-  description: Docker images for memcached
+  description: Docker images for Memcached
   topics: docker, image
 
   private: false
